@@ -1,0 +1,42 @@
+<%- include("partials/header") %>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                IMDB
+              </a>
+        </div>
+      </nav>
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Results</h1>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex temporibus fuga quis magnam quia enim aspernatur odit voluptatibus deserunt quas.</p>
+        <hr class="my-4">
+        <a class="btn btn-primary" href="/">Search again</a>
+        </div>
+      </div>
+    <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <!-- <th scope="col">#</th> -->
+                <th scope="col">Name</th>
+                <th scope="col">Year</th>
+                <!-- <th scope="col">Handle</th> -->
+              </tr>
+            </thead>
+            <tbody>
+                <% data["Search"].forEach( function(movie){ %>
+              <tr>
+                <!-- <th scope="row">1</th> -->
+                <td><%= movie["Title"] %></td>
+                <td><%= movie["Year"] %></td>
+                <!-- <td>@mdo</td> -->
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+    </div>
+
+<%- include("partials/footer") %>
